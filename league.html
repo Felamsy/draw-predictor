@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>League Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 15px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: #020617;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      background: #1e293b;
+      color: #fff;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button.back {
+      background: #64748b;
+      color: #020617;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>League Match Data</h2>
+
+  <div class="section">
+    <label>Fixture Name</label>
+    <input id="fixtureName" placeholder="e.g Arsenal vs Chelsea" />
+
+    <label>League Size (teams)</label>
+    <input id="leagueSize" type="number" />
+
+    <label>Home Position</label>
+    <input id="homePosition" type="number" />
+
+    <label>Away Position</label>
+    <input id="awayPosition" type="number" />
+  </div>
+
+  <div class="section">
+    <h4>Overall League Performance</h4>
+
+    <label>Home – Goals For</label>
+    <input id="homeGoalsFor" type="number" />
+
+    <label>Home – Goals Against</label>
+    <input id="homeGoalsAgainst" type="number" />
+
+    <label>Away – Goals For</label>
+    <input id="awayGoalsFor" type="number" />
+
+    <label>Away – Goals Against</label>
+    <input id="awayGoalsAgainst" type="number" />
+  </div>
+
+  <div class="section">
+    <h4>Venue-Specific Performance</h4>
+
+    <label>Home Team (Home) – Goals For</label>
+    <input id="homeHomeGoalsFor" type="number" />
+
+    <label>Home Team (Home) – Goals Against</label>
+    <input id="homeHomeGoalsAgainst" type="number" />
+
+    <label>Away Team (Away) – Goals For</label>
+    <input id="awayAwayGoalsFor" type="number" />
+
+    <label>Away Team (Away) – Goals Against</label>
+    <input id="awayAwayGoalsAgainst" type="number" />
+  </div>
+
+  <div class="btns">
+    <button class="back" onclick="goBack()">← Back</button>
+    <button onclick="saveLeague()">Next → H2H</button>
+  </div>
+
+  <!-- JS MUST BE AT BOTTOM -->
+  <script src="league.js"></script>
+  <script src="storage.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+body{font-family:Arial;background:#0f172a;color:#fff;margin:0;padding:20px}
+.box{max-width:600px;margin:auto;background:#111827;padding:20px;border-radius:14px}
+input,textarea,button{width:100%;padding:12px;margin-top:10px;border-radius:10px;border:none}
+button{background:#22c55e;color:#000;font-weight:bold}
+h1,h2,h3{text-align:center}

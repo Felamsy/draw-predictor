@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Draw Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Best Draw Picks</h2>
+
+<button onclick="showBest(1)">Best 1</button>
+<button onclick="showBest(3)">Best 3</button>
+<button onclick="showBest(6)">Best 6</button>
+<button onclick="showBest(10)">Best 10</button>
+
+<pre id="output"></pre>
+
+<button onclick="exportTxt()">Export TXT</button>
+<button onclick="resetDay()">Finish Today</button>
+<button onclick="addNew()">Add New Fixture</button>
+
+<script src="results.js"></script>
+</body>
+</html>

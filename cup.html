@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cup Fixture Input</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Cup / Intercontinental Fixture</h2>
+
+<label>Fixture Name</label>
+<input id="fixtureName" placeholder="Home vs Away">
+
+<h3>Last 5 Matches – HOME (General)</h3>
+<div id="homeLast5"></div>
+
+<h3>Last 5 Matches – AWAY (General)</h3>
+<div id="awayLast5"></div>
+
+<h3>Last 5 Home Matches (HOME at HOME)</h3>
+<div id="homeAtHome"></div>
+
+<h3>Last 5 Away Matches (AWAY at AWAY)</h3>
+<div id="awayAtAway"></div>
+
+<button onclick="saveCup()">Next → H2H</button>
+<button onclick="goBack()">← Back</button>
+
+<script src="cup.js"></script>
+<script src="storage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Fixture Analysis</h2>
+
+<div id="resultBox"></div>
+
+<button onclick="savePrediction()">Save Prediction</button>
+<button onclick="addNewFixture()">Add New Fixture</button>
+<button onclick="finishToday()">Finish Today</button>
+
+<script src="analyze.js"></script>
+<script>
+  const res = JSON.parse(localStorage.getItem("lastResult"));
+
+  if (res) {
+    document.getElementById("resultBox").innerHTML = `
+      <p><strong>Fixture:</strong> ${res.fixture}</p>
+      <p><strong>Draw Probability:</strong> ${(res.drawProbability * 100).toFixed(1)}%</p>
+      <p><strong>Confidence:</strong> ${res.confidence.toFixed(1)}%</p>
+      <p><strong>Verdict:</strong> ${res.confidence >= 60 ? "Worthy Draw ✅" : "Risky ❌"}</p>
+    `;
+  }
+
+  function savePrediction() {
+    alert("Prediction saved for today");
+    window.location.href = "results.html";
+  }
+
+  function addNewFixture() {
+    window.location.href = "index.html";
+  }
+
+  function finishToday() {
+    window.location.href = "results.html";
+  }
+</script>
+<script src="storage.js"></script>
+
+
+</body>
+</html>
